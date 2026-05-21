@@ -1,18 +1,37 @@
-# Quant Learning
+# 风险管理 | Risk Management
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+量化组合的风险度量、控制与压力测试体系。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+风险指标认识 → VaR/CVaR → 组合风险分解 → 压力测试 → 风控规则设计
+```
+
+## 目录结构
+
+```
+risk-management/
+├── notes/
+│   ├── 00_overview.md          # 知识点速览
+│   ├── 01_var_cvar.md          # VaR 与 CVaR 理论
+│   └── 02_portfolio_risk.md    # 组合风险分解
+├── code/
+│   ├── var_calculator.py       # 历史/参数/蒙特卡洛 VaR
+│   └── risk_decomposition.py   # 组合风险归因分解
+└── notebooks/
+    └── risk_dashboard.ipynb    # 风险指标仪表盘
+```
+
+## 核心主题
+
+- **市场风险**：VaR（历史法/参数法/蒙特卡洛）、CVaR、压力测试
+- **回撤管理**：最大回撤、水下期、回撤恢复期
+- **组合风险**：Beta 中性、因子暴露、风险平价
+- **风控规则**：止损线、仓位限制、集中度控制
+
+## 推荐资源
+
+- 《Value at Risk》— Philippe Jorion
+- 《风险管理与金融机构》— John Hull
+- Python 库：`scipy`, `numpy`, `pandas`, `pyfolio`
