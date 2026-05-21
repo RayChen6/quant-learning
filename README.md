@@ -1,18 +1,37 @@
-# Quant Learning
+# 策略开发 | Strategy Development
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+主流量化交易策略的原理与实现，涵盖动量、均值回归、套利与趋势跟踪。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+策略逻辑理解 → 信号生成 → 仓位管理 → 止损止盈 → 参数优化
+```
+
+## 目录结构
+
+```
+strategy-dev/
+├── notes/
+│   ├── 00_overview.md          # 知识点速览
+│   ├── 01_momentum.md          # 动量策略
+│   └── 02_mean_reversion.md    # 均值回归与统计套利
+├── code/
+│   ├── dual_ma_strategy.py     # 双均线趋势策略
+│   └── pairs_trading.py        # 配对交易策略
+└── notebooks/
+    └── strategy_logic.ipynb    # 策略逻辑验证
+```
+
+## 核心主题
+
+- **动量策略**：时序动量、截面动量、双均线
+- **均值回归**：布林带、RSI、Z-Score
+- **统计套利**：配对交易、协整检验、价差建模
+- **CTA**：趋势跟踪、突破策略、通道策略
+
+## 推荐资源
+
+- 《Algorithmic Trading》— Ernest Chan
+- 《Quantitative Trading》— Ernest Chan
+- Python 库：`pandas`, `numpy`, `scipy`
