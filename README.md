@@ -1,18 +1,38 @@
-# Quant Learning
+# 组合管理 | Portfolio Management
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+从单策略到组合层面的管理，涵盖组合优化、再平衡与绩效归因。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+MPT 基础 → 均值-方差优化 → 风险平价 → Black-Litterman → 再平衡 → 绩效归因
+```
+
+## 目录结构
+
+```
+portfolio-mgmt/
+├── notes/
+│   ├── 00_overview.md              # 知识点速览
+│   ├── 01_optimization.md          # 组合优化方法
+│   └── 02_performance_attribution.md  # 绩效归因
+├── code/
+│   ├── portfolio_optimizer.py      # 均值-方差与风险平价优化
+│   └── rebalancing.py              # 再平衡策略实现
+└── notebooks/
+    └── efficient_frontier.ipynb    # 有效前沿可视化
+```
+
+## 核心主题
+
+- **MPT**：均值-方差优化、有效前沿、夏普比率最大化
+- **风险平价**：等风险贡献、全天候组合
+- **Black-Litterman**：结合市场均衡与主观观点
+- **再平衡**：定期再平衡、阈值触发、税务优化
+- **绩效归因**：Brinson 模型、因子归因
+
+## 推荐资源
+
+- 《Active Portfolio Management》— Grinold & Kahn
+- 《The Black-Litterman Model in Detail》— Idzorek
+- Python 库：`PyPortfolioOpt`, `cvxpy`, `riskfolio-lib`
