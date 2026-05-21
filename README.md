@@ -1,18 +1,37 @@
-# Quant Learning
+# 回测框架 | Backtesting
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+回测系统设计与实现，理解回测偏差来源，构建可靠的策略评估体系。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+回测原理 → 偏差识别 → 向量化回测 → 事件驱动回测 → 绩效评估
+```
+
+## 目录结构
+
+```
+backtesting/
+├── notes/
+│   ├── 00_overview.md          # 知识点速览
+│   ├── 01_backtest_bias.md     # 回测偏差与陷阱
+│   └── 02_performance_metrics.md  # 绩效评估指标
+├── code/
+│   ├── vectorized_backtest.py  # 向量化回测框架
+│   └── event_driven_engine.py  # 事件驱动回测骨架
+└── notebooks/
+    └── full_backtest_example.ipynb  # 完整回测示例
+```
+
+## 核心主题
+
+- **回测偏差**：前视偏差（Look-ahead Bias）、幸存者偏差、过拟合
+- **向量化回测**：基于 pandas 的高效回测实现
+- **事件驱动回测**：订单、撮合、持仓管理
+- **绩效指标**：Sharpe、Sortino、最大回撤、Calmar、年化收益
+
+## 推荐资源
+
+- 《Advances in Financial Machine Learning》— Marcos López de Prado
+- 开源框架：`backtrader`, `zipline`, `vnpy`
+- Python 库：`pandas`, `numpy`, `matplotlib`
