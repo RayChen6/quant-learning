@@ -1,18 +1,37 @@
-# Quant Learning
+# 数据获取与处理 | Data Engineering
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+量化研究的数据基础设施，涵盖行情数据获取、清洗、存储与特征构建。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+数据源了解 → 数据获取 → 数据清洗 → 复权处理 → 特征工程 → 数据存储
+```
+
+## 目录结构
+
+```
+data-engineering/
+├── notes/
+│   ├── 00_overview.md          # 知识点速览
+│   ├── 01_data_sources.md      # 数据源介绍与对比
+│   └── 02_data_cleaning.md     # 数据清洗规范
+├── code/
+│   ├── fetch_data.py           # 多数据源获取脚本
+│   └── process_ohlcv.py        # OHLCV 处理与复权计算
+└── notebooks/
+    └── data_quality_check.ipynb  # 数据质量检查流程
+```
+
+## 核心主题
+
+- **数据源**：tushare、akshare、yfinance、Wind、Bloomberg
+- **数据类型**：OHLCV、Tick、财务数据、另类数据
+- **数据清洗**：缺失值、异常值、退市处理、复权
+- **存储方案**：CSV、HDF5、Parquet、数据库（SQLite/PostgreSQL）
+
+## 推荐资源
+
+- [Tushare Pro 文档](https://tushare.pro/document/2)
+- [AkShare 文档](https://akshare.akfamily.xyz/)
+- Python 库：`pandas`, `akshare`, `tushare`, `pyarrow`
