@@ -1,18 +1,37 @@
-# Quant Learning
+# 执行与交易系统 | Execution & Trading Systems
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+交易执行层的核心知识，涵盖市场微观结构、算法执行与交易成本分析。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+市场微观结构 → 订单类型 → 算法执行 → 交易成本分析 → OMS 设计
+```
+
+## 目录结构
+
+```
+execution/
+├── notes/
+│   ├── 00_overview.md              # 知识点速览
+│   ├── 01_market_microstructure.md # 市场微观结构
+│   └── 02_execution_algorithms.md  # 算法执行策略
+├── code/
+│   ├── simple_oms.py               # 简单订单管理系统
+│   └── transaction_cost.py         # 交易成本分析
+└── notebooks/
+    └── order_book_visualization.ipynb  # 订单簿可视化
+```
+
+## 核心主题
+
+- **市场微观结构**：买卖价差、订单簿、价格发现、市场冲击
+- **算法执行**：TWAP、VWAP、POV、IS（Implementation Shortfall）
+- **交易成本**：佣金、滑点、市场冲击成本、时机成本
+- **OMS**：订单状态管理、风控前置、成交回报处理
+
+## 推荐资源
+
+- 《Trading and Exchanges》— Larry Harris
+- 《Algorithmic and High-Frequency Trading》— Álvaro Cartea
+- Python 库：`pandas`, `numpy`, `matplotlib`
