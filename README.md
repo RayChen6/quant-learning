@@ -1,18 +1,38 @@
-# Quant Learning
+# 金融理论 | Financial Theory
 
-量化交易学习笔记与实践 | Quantitative Finance & Trading Learning
+现代金融理论核心框架，涵盖资产定价、衍生品定价、固定收益与风险理论。
 
-## 分支结构
+## 学习路线
 
-| 分支 | 领域 | 内容 |
-|------|------|------|
-| `math-stats` | 数学与统计基础 | 概率论、随机过程、线性代数、时间序列 |
-| `financial-theory` | 金融理论 | 资产定价、衍生品、固收、期权 |
-| `data-engineering` | 数据获取与处理 | 行情数据、另类数据、数据清洗 |
-| `alpha-research` | 因子与Alpha研究 | 因子挖掘、IC分析、Alpha生成 |
-| `strategy-dev` | 策略开发 | 动量、均值回归、套利、CTA |
-| `backtesting` | 回测框架 | 事件驱动回测、向量化回测 |
-| `risk-management` | 风险管理 | VaR、最大回撤、组合风控 |
-| `ml-ai` | 机器学习与AI | ML选股、NLP情感分析、强化学习 |
-| `execution` | 执行与交易系统 | OMS、算法执行、市场微观结构 |
-| `portfolio-mgmt` | 组合管理 | 组合优化、再平衡、绩效归因 |
+```
+现代投资组合理论 → CAPM/APT → 衍生品定价 → 固定收益 → 行为金融
+```
+
+## 目录结构
+
+```
+financial-theory/
+├── notes/
+│   ├── 00_overview.md          # 知识点速览
+│   ├── 01_capm_apt.md          # CAPM 与 APT
+│   ├── 02_options.md           # 期权定价理论
+│   └── 03_fixed_income.md      # 固定收益基础
+├── code/
+│   ├── black_scholes.py        # BS 公式与希腊字母
+│   └── bond_pricing.py         # 债券定价与久期
+└── notebooks/
+    └── options_greeks.ipynb    # 期权希腊字母敏感性分析
+```
+
+## 核心主题
+
+- **资产定价**：CAPM、Fama-French 三因子、APT
+- **期权定价**：Black-Scholes、二叉树、蒙特卡洛
+- **希腊字母**：Delta、Gamma、Theta、Vega、Rho
+- **固定收益**：久期、凸性、收益率曲线、利率模型
+
+## 推荐资源
+
+- 《期权、期货及其他衍生品》— John Hull
+- 《固定收益数学》— Fabozzi
+- Python 库：`mibian`, `py_vollib`, `QuantLib-Python`
